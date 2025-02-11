@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutPrincipal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_principal"
+    tools:context=".MainActivity"
+    tools:ignore="MissingConstraints">
+
+    <!-- Un TextView, en la parte superior, que muestra las palabras que se han construido y el
+    número posible de palabras que se pueden construir. -->
+    <TextView
+        android:id="@+id/PalabrasConstruidas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:text="Palabras Encontradas: "
+        android:contentDescription="textView_palabrasConstruidas_desc"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Un TextView que muestra la palabra que se va construyendo con el conjunto de letras. -->
+    <TextView
+        android:id="@+id/PalabraActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:contentDescription="textView_palabraActual_desc"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+    <!-- ImageView para el círculo de letras con un círculo de color -->
+    <ImageView
+        android:id="@+id/CirculoDeLetras"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <!-- Botones para las letras
+        -->
+    <android.widget.Button
+        android:id="@+id/btnLetra1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:onClick="setLetra"
+        android:textColor="#000000"
+        android:contentDescription="btn_letra_1_desc"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="0.100000024"
+        />
+
+    <android.widget.Button
+        android:id="@+id/btnLetra2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:onClick="setLetra"
+        android:textColor="#000000"
+        android:contentDescription="btn_letra_2_desc"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="0.41000003" />
+
+    <android.widget.Button
+        android:id="@+id/btnLetra3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:onClick="setLetra"
+        android:textColor="#000000"
+        android:contentDescription="btn_letra_3_desc"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="0.41000003" />
+
+    <android.widget.Button
+        android:id="@+id/btnLetra4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:onClick="setLetra"
+        android:textColor="#000000"
+        android:contentDescription="btn_letra_4_desc"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="0.41000003" />
+
+    <android.widget.Button
+        android:id="@+id/btnLetra5"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:onClick="setLetra"
+        android:textColor="#000000"
+        android:contentDescription="btn_letra_5_desc"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <android.widget.Button
+        android:id="@+id/btnLetra6"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:onClick="setLetra"
+        android:textColor="#000000"
+        android:contentDescription="btn_letra_6_desc"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <android.widget.Button
+        android:id="@+id/btnLetra7"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:onClick="setLetra"
+        android:textColor="#000000"
+        android:contentDescription="btn_letra_7_desc"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <!-- Botón Clear -->
+
+    <!-- Botón Send -->
+
+    <android.widget.Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:onClick="botonClear"
+        android:text="Clear"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/PalabraActual"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        app:layout_constraintVertical_bias="0.587" />
+
+    <!-- Botón Random -->
+
+    <android.widget.Button
+        android:id="@+id/btnSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:onClick="botonSend"
+        android:text="Send"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toEndOf="@+id/PalabraActual"
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        app:layout_constraintVertical_bias="0.587" />
+
+    <android.widget.Button
+        android:id="@+id/btnRandom"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/random"
+        android:contentDescription="Botón Random"
+        android:onClick="shuffleLetters"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="0.414" />
+
+    <!-- Botón Ayuda -->
+    <android.widget.Button
+        android:id="@+id/btnAyuda"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/interrogacion"
+        android:contentDescription="@string/bot_n_ayuda"
+        android:onClick="botonAyuda"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="0.41000003" />
+
+    <!-- Botón Bonus -->
+    <android.widget.Button
+        android:id="@+id/btnBonus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/bonus"
+        android:contentDescription="Botón Bonus"
+        android:onClick="botonBonus"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+    <!-- Botón Reiniciar -->
+    <android.widget.Button
+        android:id="@+id/btnReiniciar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/refresh"
+        android:contentDescription="Botón Reiniciar"
+        android:onClick="botonReiniciar"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.70191085" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5514223" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2713348" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.34135666" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.41" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.48" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
