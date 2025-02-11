@@ -1,56 +1,78 @@
-# ZenWord - Juego Tipo Wordle
+# ZenWord - Wordle-Style Game
 
-ZenWord es un juego de palabras inspirado en Wordle, desarrollado para dispositivos Android utilizando Android Studio. El objetivo del juego es adivinar palabras ocultas a partir de letras proporcionadas, mientras se acumulan puntos y se descubren palabras adicionales.
+ZenWord is a word game inspired by Wordle, developed for Android devices using Android Studio. The goal of the game is to guess hidden words from given letters while accumulating points and discovering additional words.
 
-## Características
+## Features
 
-- **Interfaz de usuario intuitiva**: Diseñada para facilitar la interacción del usuario.
-- **Palabras ocultas**: Los jugadores deben adivinar palabras ocultas a partir de letras disponibles.
-- **Sistema de puntuación**: Los jugadores acumulan puntos por cada palabra adivinada correctamente.
-- **Bonificaciones**: Los jugadores pueden obtener bonificaciones que les ayudan a descubrir letras de palabras ocultas.
-- **Colores personalizables**: La interfaz incluye combinaciones de colores que se pueden cambiar aleatoriamente.
+- **Intuitive User Interface**: Designed for smooth user interaction.
+- **Hidden Words**: Players must guess hidden words using available letters.
+- **Scoring System**: Players earn points for each correctly guessed word.
+- **Bonuses**: Players can earn bonuses to help reveal letters in hidden words.
+- **Customizable Colors**: The interface includes color schemes that can be randomly changed.
 
-## Requisitos
+## System Requirements
 
 - Android Studio
-- SDK de Android
-- Dispositivo Android o emulador
+- Android SDK
+- Android device or emulator
 
-## Instalación
+## Installation
 
-1. Clona este repositorio en tu máquina local:
+1. Clone this repository to your local machine:
    
    ```bash
    git clone https://github.com/joacoesperon/ZenWord
    ```
 
-2. Abre el proyecto en Android Studio.
+2. Open the project in Android Studio.
 
-3. Asegúrate de tener el SDK de Android configurado.
+3. Ensure that the Android SDK is properly configured.
 
-4. Ejecuta la aplicación en un dispositivo o emulador.
+4. Run the application on a device or emulator.
 
-## Uso
+## How to Play
 
-- Al iniciar el juego, se generará una palabra oculta aleatoria.
-- Los jugadores pueden seleccionar letras de un conjunto de botones.
-- Las letras seleccionadas se agregarán a la palabra actual.
-- Los jugadores deben intentar adivinar la palabra oculta antes de que se acaben las oportunidades.
+1. When the game starts, a random hidden word is generated.
+2. Players select letters from a set of buttons.
+3. Selected letters are added to the current word attempt.
+4. Players must guess the hidden word before running out of attempts.
 
-## Contribuciones
+## Project Structure
 
-Las contribuciones son bienvenidas. Si deseas contribuir a este proyecto, por favor sigue estos pasos:
+```
+ZenWord/
+├── app/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/example/zenword/
+│   │   │   │   ├── MainActivity.java  # Main game logic
+│   │   │   │   ├── WordManager.java  # Handles word selection
+│   │   │   │   ├── ScoreManager.java  # Manages scoring system
+│   │   │   ├── res/
+│   │   │   │   ├── layout/  # XML layout files
+│   │   │   │   ├── drawable/  # Icons and images
+│   │   │   │   ├── values/  # Colors, strings, and themes
+```
 
-1. Haz un fork del repositorio.
-2. Crea una nueva rama (`git checkout -b feature/nueva-caracteristica`).
-3. Realiza tus cambios y haz commit (`git commit -m 'Añadir nueva característica'`).
-4. Haz push a la rama (`git push origin feature/nueva-caracteristica`).
-5. Abre un Pull Request.
+## Contributions
 
-## Licencia
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/new-feature`).
+3. Make your changes and commit (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature/new-feature`).
+5. Open a Pull Request.
 
-## Contacto
+## Authors
 
-Para más información, puedes contactar a [joacoesperon1@gmail.com](mailto:joacoesperon1@gmail.com).
+- **Joaquín Esperón**
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+For more information, you can contact [joacoesperon1@gmail.com](mailto:joacoesperon1@gmail.com).
+
